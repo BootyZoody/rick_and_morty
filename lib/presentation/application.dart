@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty/presentation/home_page/home_page.dart';
+import 'package:rick_and_morty/presentation/characters/characters_page.dart';
+import 'package:rick_and_morty/theme/app_theme.dart';
 
 class Application extends StatelessWidget {
   const Application({super.key});
@@ -7,11 +8,8 @@ class Application extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const HomePage(title: 'Flutter Demo Home Page'),
+      theme: AppTheme.lightThemeData,
+      home: const CharactersPage(),
     );
   }
 }
